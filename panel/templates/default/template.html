@@ -1,0 +1,71 @@
+$def with (content)
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<title>$web.ctx.session.webname</title>
+		<link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+		<link href="/static/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/site.css?date=20180912" rel="stylesheet">
+		<link href="/static/codemirror/lib/codemirror.css" rel="stylesheet">
+		<!--[if lte IE 9]>
+		<script src="/static/js/requestAnimationFrame.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="bt-warp bge6">
+			<div id="container" class="container-fluid">
+				<div class="sidebar-scroll">
+					<div class="sidebar-auto">
+						<h3 class="mypcip"><span class="f14 cw">今晚月色很美</span></h3>
+						<ul class="menu">
+							<li id="memuA"> <a href="/">Home Page</a></li>
+							<li id="memuAsite"><a href="/site">Website</a></li>
+							<li id="memuAdatabase"><a href="/database">Database</a></li>
+							<li id="memuAcontrol"><a href="/control">Monitor</a></li>
+							<li id="memuAfirewall"><a href="/firewall">Security</a></li>
+							<li id="memuAfiles"><a href="/files">Files</a></li>
+							<li id="memuAcrontab"><a href="/crontab">Planning tasks</a></li>
+							<li id="memuAsoft"><a href="/soft">Software</a><span class="softnum">1</span></li>
+							<li id="memuAconfig"><a href="/config">Site Settings</a></li>
+							<li><a href="javascript:;" id="dologin">Sign out</a></li>
+                          	<li><a href="https://aroins.com" target="_blank">Blog</a></li>
+                          	<li><a href="https://homenew.console.aliyun.com/" target="_blank">Aliyun Center</a></li>
+                          	<li><a href="https://github.com" target="_blank">GitHub</a></li>
+						</ul>						
+					</div>
+				</div>
+				<button style="display: none;" id="bt_copys" class="bt_copy" data-clipboard-text=""></button>
+				<a style="display: none;" id="defaultPath">$web.ctx.session.config['sites_path']</a>
+				<script src="/static/js/jquery-1.10.2.min.js"></script>
+				<script src="/static/js/bootstrap.min.js"></script>
+				<script src="/static/language/$web.ctx.session.lan/lan.js?date=20180124"></script>
+				<script src="/static/layer/layer.js?date=20180301"></script>
+				<script src="/static/js/jquery.fly.min.js"></script>
+				<script src="/static/js/clipboard.min.js"></script>
+				<script src="/static/js/public.js?date=20180620"></script>
+				$:content
+				<!--div class="footer bgw">©2019 今晚月色很美</div></div--->
+	</body>
+	<script src="/static/codemirror/lib/codemirror.js"></script>
+	<script src="/static/codemirror/addon/edit/editAll.js"></script>
+	<script src="/static/codemirror/mode/modeAll.js"></script>
+	<script src="/static/codemirror/addon/dialog/dialog.js"></script>
+	<script src="/static/codemirror/addon/search/search.js"></script>
+	<script src="/static/codemirror/addon/scroll/annotatescrollbar.js"></script>
+	<script src="/static/js/jquery.qrcode.min.js"></script>
+	<script src="/static/laydate/laydate.js?date=20180301"></script>
+	
+	<script type="text/javascript">
+		$$("#setBox").click(function() {
+			if($$(this).prop("checked")){
+				$$("input[name=id]").prop("checked", true)
+			}else{
+				$$("input[name=id]").prop("checked", false)
+			}
+		});
+		setCookie('order','id desc');
+	</script>
+</html>
