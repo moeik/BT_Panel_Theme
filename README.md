@@ -23,3 +23,8 @@
 将panel文件夹覆盖到/www/server目录下，重启面板，清除浏览器缓存即可
 
 
+### 界面截图：
+![http://moeik.cn/1.jpg]
+![http://moeik.cn/2.jpg]
+![http://moeik.cn/3.jpg]
+![http://moeik.cn/4.jpg]
