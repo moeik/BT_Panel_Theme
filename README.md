@@ -24,7 +24,7 @@
 
 
 ### 界面截图：
-![http://moeik.cn/1.jpg]
-![http://moeik.cn/2.jpg]
-![http://moeik.cn/3.jpg]
-![http://moeik.cn/4.jpg]
+![1](http://moeik.cn/1.jpg)
+![2](http://moeik.cn/2.jpg)
+![3](http://moeik.cn/3.jpg)
+![4](http://moeik.cn/4.jpg)
