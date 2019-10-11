@@ -43,7 +43,7 @@ $(function(){
 });
 //获取负载
 function getLoad(data){
-	$("#LoadList .mask").html("<span id='Load' style='font-size:14px'>Get...</span>");
+	$("#LoadList .mask").html("<span id='Load' style='font-size:14px'>获取中..</span>");
     setCookie('one',data.one);
     setCookie('five',data.five);
     setCookie('fifteen',data.fifteen);
