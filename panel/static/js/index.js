@@ -55,16 +55,16 @@ function getLoad(data){
     if(Occupy > 100) Occupy = 100;
     if(Occupy <= 30){
       LoadColor = 'black';
-      AverageText = '运行流畅';
+      AverageText = 'Run smoothly';
     }else if(Occupy <= 70){
       LoadColor = '#6ea520';
-      AverageText = '运行正常';
+      AverageText = 'Run normally';
     }else if(Occupy <= 90){
       LoadColor = '#ff9900';
-      AverageText = '运行缓慢';
+      AverageText = 'Slow operation';
     }else{
       LoadColor = '#dd2f00';
-      AverageText = '运行堵塞';
+      AverageText = 'Operation blockage';
     }
     index.find('.circle').css("background",LoadColor);
     index.find('.mask').css({"color":LoadColor});
@@ -191,7 +191,7 @@ function getInfo() {
 		setcolor(memPre,"#left",75,90,95);
 		$("#info").html(info.system);
 		$("#running").html(info.time);
-		$("#core").html(info.cpuNum + " "+lan.index.cpu_core);
+		$("#core").html(info.cpuNum + " "+"Core");
 		$("#state").html(info.cpuRealUsed);
 		setcolor(memPre,"#state",30,70,90);
 		var memFree = info.memTotal - info.memRealUsed;
@@ -244,7 +244,7 @@ function getNet(){
 			$("#downAll").attr('title',lan.index.package+':'+net.downPackets)
 			$("#upAll").html(ToSize(net.upTotal));
 			$("#upAll").attr('title',lan.index.package+':'+net.upPackets)
-			$("#core").html(net.cpu[1] + " "+lan.index.cpu_core);
+			$("#core").html(net.cpu[1] + " "+"Core");
 			$("#state").html(net.cpu[0]);
 			setcolor(net.cpu[0],"#state",30,70,90);
 			setCookie("upNet",net.up);
