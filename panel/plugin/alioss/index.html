@@ -1,0 +1,45 @@
+<div class="zun-form-new bingfa">
+	<p>
+		<span class="span_tit">AccessKeyId：</span>
+		<input placeholder="请输入AccessKeyId" style="width: 300px;" type="text" name="access_key" value="">  *阿里云的AccessKeyId <a href="http://www.bt.cn/bbs/thread-1061-1-1.html" style="color:green" target="_blank"> [帮助]</a>
+	</p>
+	<p>
+		<span class="span_tit">AccessKeySecret：</span>
+		<input placeholder="请输入AccessKeySecret" style="width: 300px;" type="text" name="secret_key" value="">  *阿里云的AccessKeySecret
+	</p>
+	<p>
+		<span class="span_tit">Bucket：</span>
+		<input placeholder="请输入Bucket名称" style="width: 300px;" type="text" name="bucket_name" value="">   *阿里云OSS中您创建的Bucket名称
+	</p>
+	<p>
+		<span class="span_tit">外链域名：</span>
+		<input placeholder="请输入Endpoint域名" style="width: 300px;" type="text" name="bucket_domain" value="">   *阿里云OSS外链域名，不包括Bucket名
+	</p>
+	<div class="submit-btn">
+		<button type="button" class="btn btn-danger btn-sm btn-title" onclick="layer.closeAll()">取消</button>
+		<button type="button" class="btn btn-success btn-sm btn-title" onclick="GetFileList('alioss')" style="margin-right: 4px;">列表</button>
+		<button class="btn btn-success btn-sm btn-title" onclick="SetPlugin()">保存</button>
+	</div>
+</div>
+
+<script type="javascript/text">
+function SetPlugin(){
+	var access_key = $("input[name='access_key']").val();
+	var secret_key = $("input[name='secret_key']").val();
+	var bucket_name = $("input[name='bucket_name']").val();
+	var bucket_domain = $("input[name='bucket_domain']").val();
+	var param = 'access_key=' + access_key + '&secret_key=' + secret_key + '&bucket_name=' + bucket_name + '&bucket_domain=' + bucket_domain;
+	SetPluginConfig('alioss',param);
+}
+
+$(function(){
+	$.get('/plugin?action=a&name=alioss&s=GetConfig',function(rdata){
+		if(!rdata) return;
+		$("input[name='access_key']").val(rdata[0]);
+		$("input[name='secret_key']").val(rdata[1]);
+		$("input[name='bucket_name']").val(rdata[2]);
+		$("input[name='bucket_domain']").val(rdata[3]);
+	});
+});
+
+</script>
