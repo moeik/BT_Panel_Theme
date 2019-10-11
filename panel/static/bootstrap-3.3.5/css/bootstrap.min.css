@@ -6906,7 +6906,8 @@ button.close {
 }
 
 .pull-right {
-	float: right!important
+	float: right!important;
+	margin-right:20px;
 }
 
 .pull-left {
