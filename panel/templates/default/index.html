@@ -57,13 +57,42 @@ $def with (data)
 			
 			<div class="col-xs-12 col-sm-12 col-md-6 pull-left pd0">
 				<div class="pl7">
-					<div class="bgw" style="height:491px">
+					<div class="bgw" style="height:400px">
 					<div class="title c6 f16 plr15">Server real-time information</div>
 					<div class="bw-info">
+<!------------------------------------------以下为流量实时--------------------------------------------------->
+                      <div style="float:left;margin-left:20px;margin-top:10px;">
+                        <span style="font-size:15px;">Upload Speed:</span>
+                        <br>
+                        <span style="font-size:15px;">Download Speed:</span>
+                      </div>
+                      <div style="float:left;margin-left:10px;margin-top:10px;">
+                        <span style="font-size:15px;">
+                        	<a id="upSpeed" class="c6">$data['lan']['S2']</a>
+                          	<br>
+                          	<a id="downSpeed" class="c6">$data['lan']['S2']</a>
+                        </span>
+                      </div>
+                      
+                      <div style="float:left;margin-left:10%;margin-top:10px;">
+                        <span style="font-size:15px;">Total Send:</span>
+                        <br>
+                        <span style="font-size:15px;">Total Receive:</span>
+                      </div>
+                      <div style="float:left;margin-left:10px;margin-top:10px;">
+                        <span style="font-size:15px;">
+                        	<a id="upAll" title="" class="c6">$data['lan']['S2']</a>
+                          	<br>
+                          	<a id="downAll" title="" class="c6">$data['lan']['S2']</a>
+                        </span>
+                      </div>
+<!------------------------------------------以上为流量实时--------------------------------------------------->
+                      <!-----------------
                       <ul>
-							<li class="pull-left col-xs-6 col-sm-6 col-md-6 c6 f14"><span class="pull-left">Total Send:</span><a id="upAll" title="" class="c6">$data['lan']['S2']</a></li>
+							<li class="pull-left col-xs-6 col-sm-6 col-md-6 c6 f14"><span class="pull-left">Total Send:</span><a id="upAll" title="" class="c6">$data['lan']['S2']</a></li>	
 							<li class="pull-left col-xs-6 col-sm-6 col-md-6 c6 f14"><span class="pull-left">Total Receive:</span><a id="downAll" title="" class="c6">$data['lan']['S2']</a></li>
                       </ul>
+                      ------------->
 					</div>
 					<div id="NetImg" style="width:100%;height:300px;"></div>
 					</div>
