@@ -7,7 +7,8 @@ unzip -o panel.zip;
 rm -rf /www/server/panel.zip;
 echo '
 #=================================================
-#	Description: Install the BT Panel themes
+#	主题安装完成
+# 请清除浏览器缓存再访问
 #	Version: 1.0
 #	Author: biezhi
 #	Blog: https://aroins.com
