@@ -5,6 +5,9 @@ wget -N --no-check-certificate https://github.com/moeik/BT_Panel_Theme/releases/
 unzip -o panel.zip && /etc/init.d/nginx restart;
 rm -rf /www/server/panel.zip;
 echo '
-#********************************************************
-# 安装完成，请清除浏览器缓存再访问！博客地址：aroins.com
-#********************************************************'
+#=================================================
+#	Description: Install the BT Panel themes
+#	Version: 1.0
+#	Author: biezhi
+#	Blog: https://aroins.com
+#================================================='
